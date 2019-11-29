@@ -19,7 +19,7 @@ Scene Graph Prediction with Limited Labels
 
 Semi-supervised Alg. to Label Relationships
 
-![这图片: img/SPG0.png SPF1.png](https://github.com/wowowoll/read_paper/tree/master/img)
+![这图片: img/SPG0.png SPF1.png](https://github.com/wowowoll/read_paper/tree/master/img/SGP0.png)
 
 
 

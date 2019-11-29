@@ -32,6 +32,40 @@ Visual knowledge bases such as Visual Genome power numerous applications in comp
 
 本文的思想是使用半监督学习，使用现有的模型来达到将原始图片找出主体、客体区域框，来进一步的实现标注。
     
+    
+文中设计的两大思想：
+类别特征categorical features以及空间特征spatial features
+
+文中场景图向分析的算法
+Algorithm 1 Semi-supervised Alg. to Label Relationships
+````
+1: INPUT: {(o, p, o′) ∈ Dp}∀p ∈ P — A small dataset of object pairs (o, o′) with multi-class labels for predicates.
+2: INPUT: {(o, o′ )} ∈ DU } — A large unlabeled dataset of images with ob- jects but no relationship labels.
+3: INPUT:f(·,·)—A function that extracts features from apair of objects.
+4: INPUT:DT(·)—A decision tree.
+5: INPUT: G(·) — A generative model that assigns probabilistic labels given
+multiple labels for each datapoint
+6: INPUT:train(·)—Function used to train a scene graph detection model.
+7: Extract features and labels,Xp,Yp :={f(o,o′),pfor(o,p,o′)∈Dp},
+XU :={(f(o,o′)for(o,o′)∈DU}
+8: Generate heuristics by fitting J decision trees DTf it (Xp )
+9: Assign labels to (o,o′)∈DU,Λ=DTpredict(XU) for J decision trees.
+10: Learn generative model G(Λ) and assign probabilistic labels YU :=G(Λ)
+11: Train scene graph model, SGM := train(Dp + DU , Yp + YU )
+12: OUTPUT:SGM(·)
+````
+
+难点
+````
+πφ(Λ,Y) =1/Zφ (exp (􏰀φTΛY)
+
+Lθ =EY∼π􏰂[log􏰀1+exp(−θTVTY)􏰁􏰃]
+
+````
+
+
+
+
 
 
 

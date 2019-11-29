@@ -58,6 +58,7 @@ XU :={(f(o,o′)for(o,o′)∈DU}
 ![图片: img/SPG0.png](https://github.com/wowowoll/read_paper/tree/master/img/SGP0.png)
 
 ![图片: img/SPG1.png](https://github.com/wowowoll/read_paper/tree/master/img/SGP1.png)
+
 难点
 ````
 πφ(Λ,Y) =1/Zφ (exp (􏰀φTΛY)
